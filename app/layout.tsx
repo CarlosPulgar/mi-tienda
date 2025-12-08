@@ -17,9 +17,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <ClerkProvider>
       <html lang="en">
         <body className="font-poppins antialiased">
-          <Header />
-          {children}
-          {/* <Toaster
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-1">{children}</main>
+            {/* <Toaster
           position="bottom-right"
           toastOptions={{
             style: {
@@ -28,7 +29,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             },
           }}
         /> */}
-          <Footer />
+            <Footer />
+          </div>
         </body>
       </html>
     </ClerkProvider>
