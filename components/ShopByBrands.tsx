@@ -42,7 +42,7 @@ const ShopByBrands = async () => {
           View all
         </Link>
       </div>
-      {/* <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-2.5">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-2.5">
         {brands?.map((brand) => (
           <Link
             key={brand?._id}
@@ -60,7 +60,7 @@ const ShopByBrands = async () => {
             )}
           </Link>
         ))}
-      </div> */}
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16 p-2 shadow-sm hover:shadow-shop_light_green/20 py-5">
         {extraData?.map((item, index) => (
           <div
