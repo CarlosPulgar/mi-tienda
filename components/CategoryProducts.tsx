@@ -1,4 +1,5 @@
 "use client";
+
 import { Category, Product } from "@/sanity.types";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -18,6 +19,7 @@ const CategoryProducts = ({ categories, slug }: Props) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+
   const handleCategoryChange = (newSlug: string) => {
     if (newSlug === currentSlug) return; // Prevent unnecessary updates
     setCurrentSlug(newSlug);
@@ -40,6 +42,7 @@ const CategoryProducts = ({ categories, slug }: Props) => {
       setLoading(false);
     }
   };
+  
   useEffect(() => {
     fetchProducts(currentSlug);
   }, [router]);
@@ -51,7 +54,7 @@ const CategoryProducts = ({ categories, slug }: Props) => {
           <Button
             onClick={() => handleCategoryChange(item?.slug?.current as string)}
             key={item?._id}
-            className={`bg-transparent border-0 p-0  rounded-none text-darkColor shadow-none hover:bg-shop_orange hover:text-white font-semibold hoverEffect border-b last:border-b-0 transition-colors capitalize ${item?.slug?.current === currentSlug && "bg-shop_orange text-white border-shop_orange"}`}
+            className={`bg-transparent border-0 p-0  rounded-none text-darkColor shadow-none hover:bg-shop-orange hover:text-white font-semibold hoverEffect border-b last:border-b-0 transition-colors capitalize ${item?.slug?.current === currentSlug && "bg-shop-orange text-white border-shop-orange"}`}
           >
             <p className="w-full text-left px-2">{item?.title}</p>
           </Button>
