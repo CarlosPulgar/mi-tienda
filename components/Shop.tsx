@@ -3,10 +3,10 @@ import { BRANDS_QUERYResult, Category, Product } from "@/sanity.types";
 import React, { useEffect, useState } from "react";
 import Container from "./Container";
 import Title from "./Title";
-//import CategoryList from "./shop/CategoryList";
+import CategoryList from "./shop/CategoryList";
 import { useSearchParams } from "next/navigation";
-//import BrandList from "./shop/BrandList";
-//import PriceList from "./shop/PriceList";
+import BrandList from "./shop/BrandList";
+import PriceList from "./shop/PriceList";
 import { client } from "@/sanity/lib/client";
 import { Loader2 } from "lucide-react";
 import NoProductAvailable from "./NoProductAvailable";
@@ -65,6 +65,7 @@ const Shop = ({ categories, brands }: Props) => {
   useEffect(() => {
     fetchProducts();
   }, [selectedCategory, selectedBrand, selectedPrice]);
+
   return (
     <div className="border-t">
       <Container className="mt-5">
@@ -82,14 +83,14 @@ const Shop = ({ categories, brands }: Props) => {
                   setSelectedBrand(null);
                   setSelectedPrice(null);
                 }}
-                className="text-shop_dark_green underline text-sm mt-2 font-medium hover:text-darkRed hoverEffect"
+                className="text-shop-dark-green underline text-sm mt-2 font-medium hover:text-darkRed hoverEffect"
               >
                 Reset Filters
               </button>
             )}
           </div>
         </div>
-        {/* <div className="flex flex-col md:flex-row gap-5 border-t border-t-shop_dark_green/50">
+        <div className="flex flex-col md:flex-row gap-5 border-t border-t-shop_dark_green/50">
           <div className="md:sticky md:top-20 md:self-start md:h-[calc(100vh-160px)] md:overflow-y-auto md:min-w-64 pb-5 md:border-r border-r-shop_btn_dark_green/50 scrollbar-hide">
             <CategoryList
               categories={categories}
@@ -126,7 +127,7 @@ const Shop = ({ categories, brands }: Props) => {
               )}
             </div>
           </div>
-        </div> */}
+        </div>
       </Container>
     </div>
   );

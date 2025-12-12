@@ -8,7 +8,6 @@ const ShopPage = async () => {
   return (
     <div className="bg-white">
        <Shop categories={categories} brands={brands} />
-     <h1>page shop</h1>
     </div>
   );
 };
