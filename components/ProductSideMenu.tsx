@@ -1,10 +1,10 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { Product } from "@/sanity.types";
-/* import useStore from "@/store"; */
+import useStore from "@/store"; 
 import { Heart } from "lucide-react";
 import { useEffect, useState } from "react";
-/* import toast from "react-hot-toast"; */
+import toast from "react-hot-toast"; 
 
 const ProductSideMenu = ({
   product,
@@ -13,14 +13,14 @@ const ProductSideMenu = ({
   product: Product;
   className?: string;
 }) => {
-  /* const { favoriteProduct, addToFavorite } = useStore(); */
+   const { favoriteProduct, addToFavorite } = useStore(); 
   const [existingProduct, setExistingProduct] = useState<Product | null>(null);
- /*  useEffect(() => {
+   useEffect(() => {
     const availableProduct = favoriteProduct?.find(
       (item) => item?._id === product?._id
     );
     setExistingProduct(availableProduct || null);
-  }, [product, favoriteProduct]); */
+  }, [product, favoriteProduct]); 
 
   const handleFavorite = (e: React.MouseEvent<HTMLSpanElement>) => {
     e.preventDefault();

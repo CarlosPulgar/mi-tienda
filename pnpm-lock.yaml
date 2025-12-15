@@ -89,12 +89,18 @@ importers:
       react-dom:
         specifier: 19.2.0
         version: 19.2.0(react@19.2.0)
+      react-hot-toast:
+        specifier: ^2.6.0
+        version: 2.6.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react-icon:
         specifier: ^1.0.0
         version: 1.0.0(babel-runtime@5.8.38)(react@19.2.0)
       react-icons:
         specifier: ^5.5.0
         version: 5.5.0(react@19.2.0)
+      react-toastify:
+        specifier: ^11.0.5
+        version: 11.0.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       sanity:
         specifier: ^4.20.3
         version: 4.20.3(@emotion/is-prop-valid@1.2.2)(@portabletext/sanity-bridge@1.2.10(@sanity/schema@4.20.3(@types/react@19.2.7)(debug@4.4.3))(@sanity/types@4.20.3(@types/react@19.2.7)))(@types/node@20.19.25)(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(jiti@2.6.1)(lightningcss@1.30.2)(postcss@8.5.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(styled-components@6.1.19(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)(yaml@2.8.2)
@@ -107,6 +113,12 @@ importers:
       toaster:
         specifier: ^0.1.2
         version: 0.1.2
+      toastify-js:
+        specifier: ^1.12.0
+        version: 1.12.0
+      zustand:
+        specifier: ^5.0.9
+        version: 5.0.9(@types/react@19.2.7)(react@19.2.0)(use-sync-external-store@1.6.0(react@19.2.0))
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4
@@ -4451,6 +4463,11 @@ packages:
     engines: {node: '>=14'}
     deprecated: The gm module has been sunset. Please migrate to an alternative. https://github.com/aheckmann/gm?tab=readme-ov-file#2025-02-24-this-project-is-not-maintained
 
+  goober@2.1.18:
+    resolution: {integrity: sha512-2vFqsaDVIT9Gz7N6kAL++pLpp41l3PfDuusHcjnGLfR6+huZkl6ziX+zgVC3ZxpqWhzH6pyDdGrCeDhMIvwaxw==}
+    peerDependencies:
+      csstype: ^3.0.10
+
   gopd@1.2.0:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
@@ -5781,6 +5798,13 @@ packages:
       '@types/react':
         optional: true
 
+  react-hot-toast@2.6.0:
+    resolution: {integrity: sha512-bH+2EBMZ4sdyou/DPrfgIouFpcRLCJ+HoCA32UoAYHn6T3Ur5yfcDCeSr5mwldl6pFOsiocmrXMuoCJ1vV8bWg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+
   react-i18next@15.6.1:
     resolution: {integrity: sha512-uGrzSsOUUe2sDBG/+FJq2J1MM+Y4368/QW8OLEKSFvnDflHBbZhSd1u3UkW0Z06rMhZmnB/AQrhCpYfE5/5XNg==}
     peerDependencies:
@@ -5859,6 +5883,12 @@ packages:
     peerDependenciesMeta:
       '@types/react':
         optional: true
+
+  react-toastify@11.0.5:
+    resolution: {integrity: sha512-EpqHBGvnSTtHYhCPLxML05NLY2ZX0JURbAdNYa6BUkk+amz4wbKBQvoKQAB0ardvSarUBuY4Q4s1sluAzZwkmA==}
+    peerDependencies:
+      react: ^18 || ^19
+      react-dom: ^18 || ^19
 
   react@19.2.0:
     resolution: {integrity: sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==}
@@ -6435,6 +6465,9 @@ packages:
   toaster@0.1.2:
     resolution: {integrity: sha512-UNpv36vJFLB10pYKhNAiYsVXotLigfkNB44facg8Hwo2tf/tDsXgyGU4a7n+whLm+t+1xSxHX9jumh+c46f4Vw==}
     engines: {node: '>0.5.1'}
+
+  toastify-js@1.12.0:
+    resolution: {integrity: sha512-HeMHCO9yLPvP9k0apGSdPUWrUbLnxUKNFzgUoZp1PHCLploIX/4DSQ7V8H25ef+h4iO9n0he7ImfcndnN6nDrQ==}
 
   toidentifier@1.0.1:
     resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==}
@@ -11868,6 +11901,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  goober@2.1.18(csstype@3.2.3):
+    dependencies:
+      csstype: 3.2.3
+
   gopd@1.2.0: {}
 
   graceful-fs@4.2.10: {}
@@ -13191,6 +13228,13 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.2.7
 
+  react-hot-toast@2.6.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+    dependencies:
+      csstype: 3.2.3
+      goober: 2.1.18(csstype@3.2.3)
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+
   react-i18next@15.6.1(i18next@23.16.8)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(typescript@5.9.3):
     dependencies:
       '@babel/runtime': 7.28.4
@@ -13257,6 +13301,12 @@ snapshots:
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': 19.2.7
+
+  react-toastify@11.0.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+    dependencies:
+      clsx: 2.1.1
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
 
   react@19.2.0: {}
 
@@ -14168,6 +14218,8 @@ snapshots:
       mkdirp: 3.0.1
     transitivePeerDependencies:
       - supports-color
+
+  toastify-js@1.12.0: {}
 
   toidentifier@1.0.1: {}
 

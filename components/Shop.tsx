@@ -29,6 +29,7 @@ const Shop = ({ categories, brands }: Props) => {
     brandParams || null
   );
   const [selectedPrice, setSelectedPrice] = useState<string | null>(null);
+  
   const fetchProducts = async () => {
     setLoading(true);
     try {
