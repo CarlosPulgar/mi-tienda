@@ -13,7 +13,7 @@ const ProductCard = ({ product }: { product: Product }) => {
   console.log(product);
 
   return (
-    <div className="text-sm border-[1px] rounded-md border-darkBlue/20 group bg-white">
+    <div className="text-sm border-[1px] rounded-md border-darkColor/20 group bg-white">
       <div className="relative group overflow-hidden bg-shop-light-bg">
         {product?.images && (
           <Link href={`/product/${product?.slug?.current}`}>
@@ -36,7 +36,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         ) : (
           <Link
             href={"/deal"}
-            className="absolute top-2 left-2 z-10 border border-shop_orange/50 p-1 rounded-full group-hover:border-shop_orange hover:text-shop-dark-green hoverEffect"
+            className="absolute top-2 left-2 z-10 border border-shop_orange/50 p-1 rounded-full group-hover:border-shop-orange hover:text-shop-dark-green hoverEffect"
           >
             <Flame
               size={18}
@@ -67,7 +67,7 @@ const ProductCard = ({ product }: { product: Product }) => {
               />
             ))}
           </div>
-          <p className="text-lightText text-xs tracking-wide">5 Reviews</p>
+          <p className="text-lightColor text-xs tracking-wide">5 Reviews</p>
         </div>
 
         <div className="flex items-center gap-2.5">
