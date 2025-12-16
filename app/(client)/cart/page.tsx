@@ -6,7 +6,7 @@ import {
 } from "@/actions/createCheckoutSession";
 import Container from "@/components/Container";
 import EmptyCart from "@/components/EmptyCart";
-import NoAccess from "@/components/noAccess";
+import NoAccess from "@/components/NoAccess";
 import PriceFormatter from "@/components/PriceFormatter";
 import ProductSideMenu from "@/components/ProductSideMenu";
 import QuantityButtons from "@/components/QuantityButtons";
