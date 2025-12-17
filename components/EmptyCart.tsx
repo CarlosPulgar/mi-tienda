@@ -1,9 +1,9 @@
 "use client";
 import { ShoppingCart } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { emptyCart } from "@/images";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 export default function EmptyCart() {
   return (
