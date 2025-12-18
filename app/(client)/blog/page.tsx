@@ -6,7 +6,7 @@ import dayjs from "dayjs";
 import { Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
 
 const BlogPage = async () => {
   const blogs = await getAllBlogs(6);
